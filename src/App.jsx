@@ -1,10 +1,20 @@
 import './App.css'
-import Navbar from './Components/Navbar'
-
+import Choosecrowd from './Components/Choosecrowd'
+import Forraisefund from './Components/Forraisefund'
+import Heroimg from './Components/Heroimg'
+import Raisefundform2 from './Components/Raisefundform2'
+import RaisingFundform from './Components/RaisingFundform'
+ 
 function App() {
 
   return (
-    <Navbar />
+    <>
+     <Heroimg/>
+     <Choosecrowd/>
+      <Forraisefund/>
+      <RaisingFundform/>
+      <Raisefundform2/>
+     </>
   )
 }
 
