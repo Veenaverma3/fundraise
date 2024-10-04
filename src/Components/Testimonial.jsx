@@ -1,5 +1,4 @@
-import React from 'react';
-import profile from "./images/profile.png";
+ import profile from "./images/profile.png";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel"
 
 

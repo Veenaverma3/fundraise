@@ -1,5 +1,4 @@
-import React from 'react'
-
+ import { Link } from "react-router-dom"
 const Navbar = () => {
     return (
         <>
@@ -11,7 +10,7 @@ const Navbar = () => {
                     <span className='cursor-pointer hover:underline'>Contact</span>
                 </div>
                 <div className='flex space-x-5'>
-                    <span className='cursor-pointer text-sm hover:bg-gray-300 font-medium bg-gray-200 px-3 py-1 rounded '>Start a FoundRaise</span>
+                    <Link to="/raiser" className='cursor-pointer text-sm hover:bg-gray-300 font-medium bg-gray-200 px-3 py-1 rounded '>Start a FoundRaise</Link>
                     <span className='cursor-pointer hover:underline'>Sigin</span>
                 </div>
             </div>
