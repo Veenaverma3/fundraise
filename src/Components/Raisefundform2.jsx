@@ -17,67 +17,71 @@ const Raisefundform2 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-     console.log(formData);
+    console.log(formData);
   };
 
   return (
-    <div className="p-4 bg-gray-100 rounded-lg shadow-lg max-w-screen-sm mx-auto mt-24">
-      <div className="text-center mb-6">
+    <div className="p-6 bg-gray-100 rounded-lg shadow-lg max-w-lg mx-auto mt-24">
+      <div className="text-center mb-8">
         <div className="mb-4 text-4xl font-bold">Logo</div>
-        <h1 className="text-2xl font-semibold text-gray-800">Need Funds To Pay For Medical Bills/Treatment?</h1>
-        <h2 className="text-lg text-gray-600 mt-2">Our personal fundraiser expert is waiting to get you started!</h2>
+        <h1 className="text-2xl font-semibold text-gray-800">
+          Need Funds To Pay For Medical Bills/Treatment?
+        </h1>
+        <h2 className="text-lg text-gray-600 mt-2">
+          Our personal fundraiser expert is waiting to get you started!
+        </h2>
       </div>
-      
-      <div className="bg-white p-9 rounded-md shadow-md">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col">
-             <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              value={formData.name} 
-              onChange={handleChange} 
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+      <div className="p-6 rounded-md">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="flex flex-col items-center">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full max-w-sm p-3 border-b-2 text-center focus:outline-none focus:border-b-green-400 bg-gray-100 rounded-md"
               placeholder="Enter your name"
               required
             />
           </div>
 
-          <div className="flex flex-col">
-             <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              value={formData.email} 
-              onChange={handleChange} 
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <div className="flex flex-col items-center">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full max-w-sm p-3 border-b-2 text-center focus:outline-none focus:border-b-green-400 bg-gray-100 rounded-md"
               placeholder="Enter your email"
               required
             />
           </div>
 
-          <div className="flex flex-col">
-             <input 
-              type="tel" 
-              id="phone" 
-              name="phone" 
-              value={formData.phone} 
-              onChange={handleChange} 
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <div className="flex flex-col items-center">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full max-w-sm p-3 border-b-2 text-center focus:outline-none focus:border-b-green-400 bg-gray-100 rounded-md"
               placeholder="Enter your phone number"
               required
             />
           </div>
 
-          <div className="flex flex-col">
-             <select 
-              id="fundUsage" 
-              name="fundUsage" 
-              value={formData.fundUsage} 
-              onChange={handleChange} 
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <div className="flex flex-col items-center">
+            <select
+              id="fundUsage"
+              name="fundUsage"
+              value={formData.fundUsage}
+              onChange={handleChange}
+              className="w-full max-w-sm p-3 border-b-2 text-center focus:outline-none focus:border-b-green-400 bg-gray-100 rounded-md"
               required
-             >
+            >
               <option value="">What Will the Funds Be Used For?</option>
               <option value="Medical Bills">Medical Bills</option>
               <option value="Treatment Costs">Treatment Costs</option>
@@ -85,7 +89,10 @@ const Raisefundform2 = () => {
             </select>
           </div>
 
-          <button type="submit" className="w-full p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+          <button
+            type="submit"
+            className=" w-full ml-3 max-w-sm p-4 bg-green-400 text-white rounded-md hover:bg-green-600"
+          >
             Submit
           </button>
         </form>
