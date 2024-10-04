@@ -37,8 +37,8 @@ const Doubts = () => {
                         <>
                             <div key={index} className={`w-[50vw] p-3 ml-[10vw] rounded ${openIndex === index ? 'bg-white' : 'bg-transparent hover:bg-[#e9e9e9]'}`}>
                                 <div>
-                                    <span onClick={() => handleToogle(index)} className='cursor-pointer text-lg items-center flex gap-5'>{openIndex === index ? <FaChevronUp /> : <FaChevronDown />}{item.Ques}</span>
-                                    <p className={`${openIndex === index ? 'block' : 'hidden'} mt-4 text-sm text-gray-500 pl-[3vw]`}>{item.ans}</p>
+                                    <span onClick={() => handleToogle(index)} className='cursor-pointer text-lg items-center flex justify-between'>{item.Ques}{openIndex === index ? <FaChevronUp /> : <FaChevronDown />}</span>
+                                    <p className={`${openIndex === index ? 'block' : 'hidden'} mt-4 text-sm text-gray-500`}>{item.ans}</p>
                                 </div>
                             </div>
                         </>
