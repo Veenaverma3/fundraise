@@ -32,7 +32,7 @@ const Choosecrowd = () => {
   ];
 
   return (
-    <div className="p-6 bg-amber-50 min-h-screen flex items-center justify-center">
+    <div className="p-6 my-[7vh] bg-amber-50 min-h-screen flex items-center justify-center">
       <div className="max-w-4xl w-full">
         <h1 className="text-2xl md:text-5xl font-serif font-bold mb-3 text-center mt-8">
           Why are people choosing medical crowdfunding?

@@ -20,7 +20,7 @@ const Testimonial = () => {
     ]
 
     return (
-        <div className='bg-[#F5F5F5] font-serif py-5'>
+        <div className='bg-[#F5F5F5] font-serif pt-7 pb-20'>
             <div className='flex flex-col gap-3 mb-8 '>
                 <h1 className='text-center text-3xl font-medium text-gray-700'>Hear from people like you</h1>
                 <div className='bg-yellow-400 w-28  h-1 rounded-2xl mx-auto'></div>

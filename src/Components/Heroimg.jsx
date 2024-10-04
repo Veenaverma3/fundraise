@@ -6,7 +6,7 @@ const Heroimg = () => {
       <img
         src={hero}
         alt="Hero"
-        className="w-full h-auto max-w-screen-2xl max-h-[80vh] min-h-dvh mx-auto overflow-hidden object-cover"
+        className="w-full h-auto max-w-screen-2xl max-h-[70vh] min-h-dvh mx-auto overflow-hidden object-cover"
       />
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <div className="text-center px-4">
