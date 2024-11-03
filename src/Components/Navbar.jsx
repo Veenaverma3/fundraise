@@ -20,15 +20,15 @@ const Navbar = () => {
                     <span className='cursor-pointer hover:text-gray-500'><Link to="/contact">Contact</Link></span>
                 </div>
                 <div className='flex space-x-5'>
-                    <span className='cursor-pointer text-white text-sm hover:bg-teal-400 bg-teal-300 px-3 py-1 rounded-2xl border-2 border-gray-400 hover:border-gray-500 hover: '><Link to="/fund">Start a FoundRaise</Link></span>
-                    <Dialog>
+                    <span className='cursor-pointer text-white text-sm hover:bg-teal-400 bg-teal-300 px-3 py-1 rounded-2xl border-2 border-gray-400 hover:border-gray-500 hover: '><Link to="/fund_raise">Start a FoundRaise</Link></span>
+                    {/* <Dialog>
                         <DialogTrigger>
                             <span className='cursor-pointer hover:text-gray-500'>Signin</span>
                         </DialogTrigger>
                         <DialogContent className="max-h-[100vh] p-0 m-0">
                             <Raisefundform2 />
                         </DialogContent>
-                    </Dialog>
+                    </Dialog> */}
 
                 </div>
             </div>

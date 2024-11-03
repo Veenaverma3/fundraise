@@ -12,7 +12,7 @@ const RaisingFundform = () => {
         />
         <h1 className="text-xl md:text-2xl font-semibold mt-4 text-center md:text-left">
           Thousands Are Raising Funds
-          <br /> Online On ImpactGuru
+          <br /> Online On Logo
         </h1>
         <h1 className="text-xl md:text-3xl font-bold mt-2 text-center md:text-left">
           You Can Too

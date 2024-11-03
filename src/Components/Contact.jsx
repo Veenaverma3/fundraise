@@ -1,9 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import contact from '@/Components/images/contact.jpg'
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { FaInstagram, FaLinkedinIn, FaSquareFacebook, FaWhatsapp, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import axios from 'axios';
+import { toast } from 'sonner';
 
 const Contact = () => {
+    const [data, setData] = useState({
+        name: '',
+        email: '',
+        content: ''
+    })
+
+    const handleData = (e) => {
+        const fieldName = e.target.name;
+        setData({ ...data, [fieldName]: e.target.value })
+    }
+
+    const handleSubmit = async () => {
+        console.log(data);
+        // all fields are required for sending req
+        if (!data.name || !data.content || !data.email) {
+            toast.error("All fields are required");
+            return
+        }
+
+        try {
+            const res = await axios.post("http://localhost:5000/suggestion/send", data, { withCredentials: true });
+
+            if (res.data.success) {
+                toast.success(res.data.message);
+                setData({
+                    name: '',
+                    email: '',
+                    content: ''
+                })
+            }
+        } catch (error) {
+            console.log("Error in handleSubmit:", error);
+            toast.error(error.response.data.message);
+        }
+    }
+
     return (
         <>
             <div className='relative '>
@@ -19,11 +57,11 @@ const Contact = () => {
             <div className='mx-[10vw] mt-10'>
                 <h1 className='text-3xl text-gray-700'>Let us know what you think</h1>
                 <div className='flex justify-between gap-[5vw] mt-8'>
-                    <input type="text" placeholder='Name' className='w-1/2 border-b-2 focus:border-gray-400 pl-3 text-lg text-gray-400 pb-3 outline-none font-medium' />
-                    <input type="text" placeholder='Email Address' className='w-1/2 border-b-2 focus:border-gray-400 pl-3 text-lg text-gray-400 pb-3 outline-none font-medium' />
+                    <input type="text" value={data.name} name='name' onChange={(e) => handleData(e)} placeholder='Name' className='w-1/2 border-b-2 focus:border-gray-400 pl-3 text-lg text-gray-400 pb-3 outline-none font-medium' />
+                    <input type="text" value={data.email} name='email' onChange={(e) => handleData(e)} placeholder='Email Address' className='w-1/2 border-b-2 focus:border-gray-400 pl-3 text-lg text-gray-400 pb-3 outline-none font-medium' />
                 </div>
-                <textarea name="" placeholder='You can type any suggestions or queries you might have. Let us help you!' className='mt-10 w-full text-lg font-medium text-gray-400 outline-gray-400 scrollbar-hidden border-2 border-gray-200 rounded-lg p-3' />
-                <button className='mt-10 py-2 px-16 text-xl rounded-lg text-white bg-gray-600 hover:bg-black'>Send</button>
+                <textarea name="content" value={data.content} onChange={(e) => handleData(e)} placeholder='You can type any suggestions or queries you might have. Let us help you!' className='mt-10 w-full text-lg font-medium text-gray-400 outline-gray-400 scrollbar-hidden border-2 border-gray-200 rounded-lg p-3' />
+                <button onClick={handleSubmit} className='mt-10 py-2 px-16 text-xl rounded-lg text-white bg-gray-600 hover:bg-black'>Send</button>
             </div>
 
             <div className='w-full my-[10vh] px-[5vw] py-5 text-white' style={{ backgroundImage: 'linear-gradient(15deg, #13547a 0%, #80d0c7 100%)' }}>

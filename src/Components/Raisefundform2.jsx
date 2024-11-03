@@ -25,7 +25,7 @@ const Raisefundform2 = () => {
       <div className="text-center">
         <div className="mb-2 text-4xl font-bold">Logo</div>
         <h2 className="text-lg text-gray-600 mt-2">
-          Signin to process further for the Fundraise
+          Enter your Details before Donating
         </h2>
       </div>
 
@@ -70,7 +70,7 @@ const Raisefundform2 = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <input
               type="text"
               id="pwd"
@@ -81,16 +81,16 @@ const Raisefundform2 = () => {
               placeholder="Enter your Password"
               required
             />
-          </div>
+          </div> */}
 
           <button
             type="submit"
-            className=" w-full ml-3 max-w-sm p-4 bg-teal-400 text-white rounded-md hover:bg-teal-500"
+            className=" w-full font-medium ml-3 max-w-sm p-4 bg-teal-400 text-white rounded-md hover:bg-teal-500"
           >
-            Submit
+            Submit Details
           </button>
 
-          <p className='text-center' >Don't have a Account? <span className='text-teal-500 hover:underline cursor-pointer'> Signup</span></p>6
+          {/* <p className='text-center' >Don't have a Account? <span className='text-teal-500 hover:underline cursor-pointer'> Signup</span></p> */}
         </form>
       </div>
     </div>
